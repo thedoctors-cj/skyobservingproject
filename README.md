@@ -15,9 +15,9 @@ An instructor guide for the full project is available here: http://wp.towson.edu
 An export file of the Blackboard observation forms is available by request: jescott@towson.edu
 
 
-------------------------------
+
 Instructions: short version
-------------------------------
+==================================================================
 
 When you start a new semester:
 
@@ -34,13 +34,14 @@ observations are due.
 
 
 
-------------------------------
+
 Instructions: detailed version
-------------------------------
-
-
-Set up
 ==================================================================
+
+
+-------------------------------------------------------------------
+Set up
+-------------------------------------------------------------------
 
 Initial set-up (one time)
 -------------------------------------------------------------------
@@ -82,8 +83,9 @@ https://www.usno.navy.mil/USNO/astronomical-applications/data-services/data-serv
 (Note: This site is down as of 2019-2021. It is scheduled to return to service in June 2021.)
 
 
+-------------------------------------------------------------------
 Running the script from a web form
-==================================================================
+-------------------------------------------------------------------
 After students enter their observation data and the deadline has passed, download their responses from Blackboard
 by choosing "Download Responses" from the menu on that observation's Grade Center column.
 
