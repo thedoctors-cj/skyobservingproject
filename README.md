@@ -63,13 +63,15 @@ Beginning-of-semester set up (for each new semester)
 1. Make a subdirectory for your new semester, e.g. 2021_Spring
 
 2. bash script
-a. Copy gradeAndTar.sh into your new semester subdirectory:
+a. Copy gradeAndTar.sh into your new semester subdirectory.
+
 b. In gradeAndTar.sh modify the SEMESTER_START_DATE variable to account for
 the first day of the semester.  This is the Saturday 3 weeks before the first
 observations are due.
 
 3. In the script WebInterface/web_page.py
 a. change the current_directory variable to the semester subdirectory you just created in step 1 above
+
 b. start the web server:
 ./web_page.py
 
