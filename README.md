@@ -65,7 +65,7 @@ This repository contains USNO data through 2045 for the Baltimore area.
 If you are using this tool outside this area, you will need to use data tables appropriate for your location.
 Sun and Moon position data and Moon phase data can be downloaded at the USNO Data Services website:
 https://www.usno.navy.mil/USNO/astronomical-applications/data-services/data-services
-(Note: This site is down as of 2019-2021. It is scheduled to return to service in June 2021.)
+(Note: This site is down as of 2019-2021. It is scheduled to return to service in June 2021. A possible alternative is https://astro.ukho.gov.uk/surfbin/first_beta.cgi)
 
 
 
