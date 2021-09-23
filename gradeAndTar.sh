@@ -7,7 +7,7 @@ SEMESTER_START_DATE='January 26, 2019'
 NUM=$1
 YEAR=${SEMESTER_START_DATE:(-4)}
 NOW=$(date +"%Y%m%d%H%M%S")
-BASENAME=Observation_${YEAR}_
+BASENAME=Observation_
 cp ${BASENAME}${NUM}.xls ${BASENAME}${NUM}.backup-${NOW}.xls
 dos2unix ${BASENAME}${NUM}.xls
 pwd
