@@ -41,7 +41,11 @@ def strip_tags(html):
 def isolateAnswers(answers):
     # keep username, lastName and firstName
     just_answers = answers[0:3]
-    answers = answers[3:]
+    # New version of Blackboard adds "Full Name" which we ignore
+    answers = answers[4:]
+    # It also adds two nonsene columns at the end which we delte
+    answers = answers[:-2]
+    # Now we got through and grab every 
     while (len(answers) > 0):
         answers = answers[2:]
         just_answers.append(answers.pop(0))
@@ -842,7 +846,10 @@ def gradeObservations(answers, scores, flagged, previous_observation_dates, suns
     # dumping the answer between "Moon was visible" and "Moon Phase"
     # because it is now a question where people just upload their
     # images
-    if year > 2017:
+
+    # Modified in 2023 because Blackboard stopped allowing images to
+    # be uploaded as responses
+    if year > 2017 and year < 2023:
         scores[name]['moon_phase']['value'] = answers.pop(0)
     scores[name]['moon_phase']['value'] = answers.pop(0)
 
