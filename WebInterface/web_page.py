@@ -10,8 +10,6 @@ import subprocess
 datetime_format = "%Y%m%d%H%M%S"
 #current_directory="2020_Fall"
 current_directory="2019_Spring-Python"
-#current_year=date.today().year
-current_year=current_directory[0:4]
 users = { "AAAA":"BBBB1234" , "CCCC":"DDDD1234" }
 
 # Check Passwords
@@ -60,7 +58,7 @@ def do_upload():
 
     # Work in a timestamped directory to avoid stomping things
     now = datetime.now().strftime(datetime_format)
-    base_name = "Observation_{year}_{obs_num}".format(year=current_year, obs_num=obs_num)
+    base_name = "Observation_{obs_num}".format(obs_num=obs_num)
     directory = base_name + ("-%s" % now)
     in_file   = base_name + ".xls"
     out_file  = base_name + "_all.tgz"
