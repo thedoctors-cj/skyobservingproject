@@ -149,6 +149,9 @@ if config.myGlobals["verbose"]:
 # names, and the counter is $no_name:
 no_name = 1
 
+# Track if a student submitted multiple times
+number_of_submissions = {}
+
 
 # We currently assume that each line consists of a student's name
 # followed by their answers
@@ -156,6 +159,7 @@ for row in lines[1:]:
     # clean blackboard junk
     row = gradingSubroutines.strip_tags(row)
     row = row.replace(u'\xa0', u' ')
+    row = row.replace('\\n', '')
 
     # store the answers in the @answers array
     answers = row.split("\t")
@@ -170,6 +174,13 @@ for row in lines[1:]:
         print(f" using NoName{no_name}\n", file=sys.stderr)
         answers[0] = "NoName" + no_name
         no_name += 1
+
+    if answers[0] in number_of_submissions:
+        number_of_submissions[answers[0]] += 1
+        flagged[answers[0]] = f"This student submitted {number_of_submissions[answers[0]]} times - only scored first one"
+        continue
+    else:
+        number_of_submissions[answers[0]] = 1
 
     just_answers = gradingSubroutines.isolateAnswers(answers)
     if config.myGlobals["verbose"]:
